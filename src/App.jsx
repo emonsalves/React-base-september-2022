@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Context
 import GeneralContext from "./Context/GeneralContext";
 // Components
-import { Home } from "./pages";
+import { Home, Error404 } from "./pages";
 
 const App = () => {
   const { test } = useContext(GeneralContext);
@@ -14,6 +14,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   );
