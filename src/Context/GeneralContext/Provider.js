@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // Context
 import GeneralContext from ".";
 // Utilities
@@ -15,6 +15,12 @@ const GeneralContextProvider = ({ children }) => {
       alert("Un error ha ocurrido. Por favor actualice la página");
     }
   };
+
+  useEffect(() => {
+    console.log(
+      "Una buen ejemplo para traer data desde una Api al momento de cargar la app, es usar el useEffect acá"
+    );
+  }, []);
 
   return <GeneralContext.Provider value={{ test, setTest }}>{children}</GeneralContext.Provider>;
 };
