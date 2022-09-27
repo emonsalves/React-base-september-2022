@@ -1,10 +1,10 @@
-import { Footer, Header, Content } from "../../Components/";
+import { Footer, Header, HomeContent } from "../../Components/";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <Content />
+      <HomeContent />
       <Footer />
     </>
   );
